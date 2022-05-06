@@ -1,2 +1,0 @@
-# youngwow-training
-## Ruby exericise
