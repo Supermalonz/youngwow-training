@@ -1,17 +1,18 @@
 class ProblemTwo
+  def next_index(pivot, pivot_string)
+    return 1 if pivot.length >= 2 && pivot[-2] == pivot[-1] && pivot[-1] == pivot_string[2][1]
+      
+    2
+  end
   def longest_string(a, b, c)
     pivot = []
     pivot_string = [[a, 'a'], [b, 'b'], [c, 'c']]
   
     while true
       pivot_string = pivot_string.sort
-      if pivot.length >= 2 and pivot[-2] == pivot[-1] and pivot[-1] == pivot_string[2][1]
-        temp = 1
-      else
-        temp = 2
-      end
+      temp = next_index(pivot, pivot_string)
   
-      if pivot_string[temp][0] != 0
+      if pivot_string[temp][0] > 0
         pivot.append(pivot_string[temp][1])
         pivot_string[temp][0] -= 1
       else
