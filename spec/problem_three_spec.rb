@@ -10,6 +10,5 @@ describe ProblemThree do
         expect(subject).to eq 4
       end
     end
-
   end
 end

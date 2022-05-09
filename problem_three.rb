@@ -1,5 +1,6 @@
 class Tree
   attr_reader :left, :right, :value
+
   def initialize(tree)
     @value, @left, @right = tree
     @left = Tree.new @left if @left.is_a? Array
@@ -8,17 +9,14 @@ class Tree
 end
 
 class ProblemThree
-
+  @count_node = 0
   def visible_tree(tree)
     node = Tree.new(tree)
     count_node(node, -Float::INFINITY)
   end
 
   def count_node(node, max_value)
-    if node.nil?
-      return
-    end
-    
+    return @count_node if node.nil?
     if node.value >= max_value
       count_node += 1
       max_value = [node.value, max_value].max
