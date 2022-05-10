@@ -1,44 +1,57 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/kavepol.k/Desktop/youngwow-training/spec/problem_one_spec.rb": {
+      "/Users/kavepol.k/Desktop/youngwow-training/spec/problem_three_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
-          1,
-          1,
-          null,
+          2,
           null,
           1,
-          1,
-          1,
-          null,
-          null,
           1,
           1,
           1,
           null,
           null,
-          1,
-          1,
-          1,
           null,
           null
         ]
       },
-      "/Users/kavepol.k/Desktop/youngwow-training/problem_one.rb": {
+      "/Users/kavepol.k/Desktop/youngwow-training/problem_three.rb": {
         "lines": [
           1,
           1,
+          null,
+          1,
+          6,
+          6,
+          6,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          13,
+          null,
+          6,
           4,
           4,
+          null,
+          6,
+          6,
           null,
           null
         ]
       }
     },
-    "timestamp": 1652063367
+    "timestamp": 1652147408
   }
 }

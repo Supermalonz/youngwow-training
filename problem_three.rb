@@ -9,16 +9,17 @@ class Tree
 end
 
 class ProblemThree
-  @count_node = 0
   def visible_tree(tree)
+    @count = 0
     node = Tree.new(tree)
     count_node(node, -Float::INFINITY)
   end
 
   def count_node(node, max_value)
-    return @count_node if node.nil?
+    return @count if node.nil?
+    
     if node.value >= max_value
-      count_node += 1
+      @count += 1
       max_value = [node.value, max_value].max
     end
     count_node(node.left, max_value)

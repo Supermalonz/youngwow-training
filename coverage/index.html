@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-05-09T09:29:27+07:00">2022-05-09T09:29:27+07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-05-10T08:50:08+07:00">2022-05-10T08:50:08+07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.33
+         2.88
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>18</b> relevant lines,
-    <span class="green"><b>18</b> lines covered</span> and
+    <b>26</b> relevant lines,
+    <span class="green"><b>26</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -71,24 +71,24 @@
       <tbody>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#3440212375b996202b0342b0f142f5e1eda6ebef" class="src_link" title="problem_one.rb">problem_one.rb</a></td>
+            <td class="strong t-file__name"><a href="#b8fd5349a94e66b5f5fc37080d4d65a3f6e322eb" class="src_link" title="problem_three.rb">problem_three.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">6</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">4</td>
+            <td class="cell--number">28</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">18</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.50</td>
+            <td class="cell--number">3.67</td>
             
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#33d63c5638a21af11a26ac77ff57e6f2d6b7198f" class="src_link" title="spec/problem_one_spec.rb">spec/problem_one_spec.rb</a></td>
+            <td class="strong t-file__name"><a href="#df462abb2445d2f1142f8065ee1aee1d8cbee421" class="src_link" title="spec/problem_three_spec.rb">spec/problem_three_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">23</td>
             <td class="cell--number">14</td>
-            <td class="cell--number">14</td>
+            <td class="cell--number">8</td>
+            <td class="cell--number">8</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">1.13</td>
             
           </tr>
         
@@ -109,9 +109,9 @@
 
       <div class="source_files">
       
-        <div class="source_table" id="3440212375b996202b0342b0f142f5e1eda6ebef">
+        <div class="source_table" id="b8fd5349a94e66b5f5fc37080d4d65a3f6e322eb">
   <div class="header">
-    <h3>problem_one.rb</h3>
+    <h3>problem_three.rb</h3>
     <h4>
       <span class="green">
   100.0%
@@ -123,8 +123,8 @@
     
 
     <div class="t-line-summary">
-      <b>4</b> relevant lines.
-      <span class="green"><b>4</b> lines covered</span> and
+      <b>18</b> relevant lines.
+      <span class="green"><b>18</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -142,7 +142,7 @@
 
             
 
-            <code class="ruby">class ProblemOne</code>
+            <code class="ruby">class Tree</code>
           </li>
         </div>
       
@@ -153,34 +153,67 @@
 
             
 
-            <code class="ruby">  def largest_number(number)</code>
+            <code class="ruby">  attr_reader :left, :right, :value</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="3">
-            <span class="hits">4</span>
+          <li class="never" data-hits="" data-linenumber="3">
+            
             
 
             
 
-            <code class="ruby">    number = number.to_s.split(&quot;&quot;).sort.reverse</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="4">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    number.join.to_i</code>
+            <code class="ruby">  def initialize(tree)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="5">
+          <li class="covered" data-hits="6" data-linenumber="5">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">    @value, @left, @right = tree</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="6">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">    @left = Tree.new @left if @left.is_a? Array</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="7">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">    @right = Tree.new @right if @right.is_a? Array</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
             
             
 
@@ -191,7 +224,216 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class ProblemThree</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def visible_tree(tree)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    @count = 0</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    node = Tree.new(tree)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    count_node(node, -Float::INFINITY)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="18">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def count_node(node, max_value)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="13" data-linenumber="19">
+            <span class="hits">13</span>
+            
+
+            
+
+            <code class="ruby">    return @count if node.nil?</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby">    </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="21">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">    if node.value &gt;= max_value</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="4" data-linenumber="22">
+            <span class="hits">4</span>
+            
+
+            
+
+            <code class="ruby">      @count += 1</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="4" data-linenumber="23">
+            <span class="hits">4</span>
+            
+
+            
+
+            <code class="ruby">      max_value = [node.value, max_value].max</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="25">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">    count_node(node.left, max_value)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="26">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">    count_node(node.right, max_value)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
             
             
 
@@ -206,9 +448,9 @@
 </div>
 
       
-        <div class="source_table" id="33d63c5638a21af11a26ac77ff57e6f2d6b7198f">
+        <div class="source_table" id="df462abb2445d2f1142f8065ee1aee1d8cbee421">
   <div class="header">
-    <h3>spec/problem_one_spec.rb</h3>
+    <h3>spec/problem_three_spec.rb</h3>
     <h4>
       <span class="green">
   100.0%
@@ -220,8 +462,8 @@
     
 
     <div class="t-line-summary">
-      <b>14</b> relevant lines.
-      <span class="green"><b>14</b> lines covered</span> and
+      <b>8</b> relevant lines.
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -239,7 +481,7 @@
 
             
 
-            <code class="ruby">require &#39;./problem_one&#39;</code>
+            <code class="ruby">require &#39;./problem_three.rb&#39;</code>
           </li>
         </div>
       
@@ -261,7 +503,7 @@
 
             
 
-            <code class="ruby">RSpec.describe ProblemOne do</code>
+            <code class="ruby">describe ProblemThree do</code>
           </li>
         </div>
       
@@ -272,51 +514,51 @@
 
             
 
-            <code class="ruby">  it &#39;return largest number from integer&#39; do</code>
+            <code class="ruby">  describe &#39;#solution&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="5">
+            <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    problem_one = ProblemOne.new</code>
+            <code class="ruby">    let(:instance) { described_class.new }</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(problem_one.largest_number(5123)).to eq 5321</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="6">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    context &#39;Case 1&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      it &#39;return 4, when input is [5, [3, [20, nil, nil], [21, nil, nil]], [10, [1, nil, nil], nil]]&#39; do</code>
           </li>
         </div>
       
@@ -327,7 +569,7 @@
 
             
 
-            <code class="ruby">  it &#39;return largest number from integer&#39; do</code>
+            <code class="ruby">        subject = instance.visible_tree([5, [3, [20, nil, nil], [21, nil, nil]], [10, [1, nil, nil], nil]])</code>
           </li>
         </div>
       
@@ -338,18 +580,18 @@
 
             
 
-            <code class="ruby">    problem_one = ProblemOne.new</code>
+            <code class="ruby">        expect(subject).to eq 4</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="11">
+            
             
 
             
 
-            <code class="ruby">    expect(problem_one.largest_number(44163)).to eq 64431</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -360,7 +602,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -371,111 +613,12 @@
 
             
 
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  it &#39;return largest number from integer&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    problem_one = ProblemOne.new</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="16">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(problem_one.largest_number(213)).to eq 321</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="17">
-            
-            
-
-            
-
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="19">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  it &#39;return largest number from integer&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="20">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    problem_one = ProblemOne.new</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="21">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(problem_one.largest_number(553)).to eq 553</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="22">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="23">
+          <li class="never" data-hits="" data-linenumber="14">
             
             
 
